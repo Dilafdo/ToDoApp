@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script language="JavaScript" type="text/javascript" src="/assets/todo-list.js"></script>
+        <link href="/assets/styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>My todo list</h1>
+        <div id="todo-table">
+            <form>
+                <input type="text" name="item" placeholder="Add new item..." required />
+                <button type="submit">Add Item</button>
+            </form>
+            <ul>
+                <% for(let i=0; i < todos.length; i++){ %>
+                    <li title="Click to delete the item"><%=todos[i].item%></li>
+                <% } %>
+            </ul>
+        </div>       
+    </body>
+</html>
